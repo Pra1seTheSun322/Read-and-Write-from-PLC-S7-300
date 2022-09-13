@@ -38,12 +38,12 @@ plc.db_write(db_number, 6, buffer)
 plc.db_write(db_number, 4, bytearray([0, 15]))
 plc.db_write(db_number, 0, bytearray([False]))
 
-#Reading from merker member
+#Reading from merker memory
 merker = plc.mb_read(1, 2)
 value_merker = int.from_bytes(merker, byteorder='big')
 print(f'Merker Word 1: {value_merker}')
 
-#Writing to merker
+#Writing to memory
 plc.mb_write(4, 2, bytearray([0,255]))
 
 merker = plc.mb_read(0, 1)

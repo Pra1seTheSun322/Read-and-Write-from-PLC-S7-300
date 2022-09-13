@@ -1,8 +1,6 @@
 import snap7
 
 #IP PLC
-
-
 ip = '192.168.0.22'
 slot = 2
 rack = 0
